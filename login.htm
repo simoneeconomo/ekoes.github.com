@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/basic.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/login.css">
+		<title>Login &ndash; Symphony</title>
+	</head>
+	<body onload="document.forms[0].elements.username.focus()">
+		<form action="" method="post">
+			<h1>Symphony</h1>
+			<fieldset>
+				<legend>Login</legend>
+				<label>Username
+					<input name="username" type="text">
+				</label>
+				<label>Password
+					<input name="password" type="password">
+				</label>
+			</fieldset>
+			<div class="actions">
+				<button name="action[login]" type="submit" accesskey="s">Login</button>
+				<input name="redirect" type="hidden" value="#">
+			</div>
+		</form>
+	</body>
+</html>
