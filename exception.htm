@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Symphony Error</title>
+	<style type="text/css" media="all">
+		*{
+			margin: 0; padding: 0;
+		}
+
+		body{
+			margin: 20px auto;
+			width: 95%;
+			min-width: 950px;
+			font-family: Helvetica, "MS Trebuchet", Arial, sans-serif;
+			background-color: #ccc;
+			font-size: 12px;
+		}
+
+		.bubble{
+			background-color: white;
+			padding: 22px;
+
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+
+			border: 2px solid #bbb;
+		}
+
+		h1{
+			font-size: 34px;
+			text-shadow: 2px 2px 2px #999;
+			margin-bottom: 10px;
+		}
+
+		h2, h3{
+			text-shadow: 2px 2px 2px #ccc;
+		}
+
+		a.markdown {
+			float: right;
+			margin-right: 20px;
+			font-weight: normal;
+			color: blue;
+		}
+
+		code{
+			font-size: 11px;
+			font-family: Monaco, "Courier New", Courier;
+		}
+
+		pre#markdown {
+			padding: 10px 0;
+		}
+
+		ul, pre#markdown{
+			list-style: none;
+			color: #111;
+			margin: 20px;
+			border-left: 5px solid #bbb;
+			background-color: #efefef;
+		}
+
+		li{
+			background-color: #dedede;
+			padding: 1px 5px;
+
+			border-left: 1px solid #ddd;
+		}
+
+		li.odd{
+			background-color: #efefef;
+		}
+
+		li#error{
+			background-color: #E8CACA;
+			color: #B9191A;
+		}
+
+		li small{
+			font-size: 10px;
+			color: #666;
+		}
+	</style>
+</head>
+<body>
+	<h1>Symphony Fatal Error</h1>
+	<div class="bubble">
+		<a class="markdown" href="#markdown" onclick="javascript:document.getElementById('markdown').style.display = ((document.getElementById('markdown').style.display == 'none') ? 'block' : 'none'); return false;">Show Markdown for copy/paste</a>
+
+		<h2>Could not find extension at location /symphony-2/extensions/selectbox_link_field/extension.driver.php</h2>
+		<p>An error occurred in <code>/symphony-2/symphony/lib/toolkit/class.extensionmanager.php</code> around line <code>645</code></p>
+
+		<pre id="markdown" style="display: none;">	Could not find extension at location /symphony-2/extensions/selectbox_link_field/extension.driver.php
+	/symphony-2/symphony/lib/toolkit/class.extensionmanager.php line 645
+
+	640			if(!isset(self::$_pool[$name])){
+	641				$classname = self::__getClassName($name);
+	642				$path = self::__getDriverPath($name);
+	643
+	644				if(!is_file($path)){
+	645					throw new Exception(
+	646						__('Could not find extension at location %s', array($path))
+	647					);
+	648				}
+	649
+</pre>
+
+		<ul><li class="odd"><strong>640:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!isset(self::$_pool[$name])){
+</code></li><li><strong>641:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$classname = self::__getClassName($name);
+</code></li><li class="odd"><strong>642:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$path = self::__getDriverPath($name);
+</code></li><li><strong>643:</strong> <code>
+</code></li><li class="odd"><strong>644:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!is_file($path)){
+</code></li><li id="error"><strong>645:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception(
+</code></li><li class="odd"><strong>646:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__('Could not find extension at location %s', array($path))
+</code></li><li><strong>647:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);
+</code></li><li class="odd"><strong>648:</strong> <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+</code></li><li><strong>649:</strong> <code>
+</code></li></ul>
+
+		<h3>Backtrace:</h3>
+		<ul><li class="odd"><code>[/symphony-2/symphony/lib/toolkit/class.extensionmanager.php:115] <strong>ExtensionManager::create();</strong></code></li><li><code>[/symphony-2/symphony/lib/toolkit/class.extensionmanager.php:617] <strong>ExtensionManager::getInstance();</strong></code></li><li class="odd"><code>[/symphony-2/symphony/lib/core/class.administration.php:200] <strong>ExtensionManager::about();</strong></code></li><li><code>[/symphony-2/symphony/lib/core/class.administration.php:363] <strong>Administration->__buildPage();</strong></code></li><li class="odd"><code>[/symphony-2/index.php:25] <strong>Administration->display();</strong></code></li></ul>
+
+		<h3>Database Query Log:</h3>
+		<ul><li class="odd"><code>SET character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8';</code> <small>[0.0001]</small></li><li><code>SET CHARACTER SET 'utf8';</code> <small>[0.0001]</small></li><li class="odd"><code>SELECT SQL_CACHE t1.name, t2.page, t2.delegate, t2.callback
+					FROM `sym_extensions` as t1 INNER JOIN `sym_extensions_delegates` as t2 ON t1.id = t2.extension_id
+					WHERE t1.status = 'enabled';</code> <small>[0.0004]</small></li><li><code>SELECT SQL_CACHE `session_data` FROM `sym_sessions` WHERE `session` = '123456789456123' LIMIT 1;</code> <small>[0.0002]</small></li><li class="odd"><code>DELETE FROM `sym_sessions` WHERE `session_expires` &lt;= '1318793072';</code> <small>[0.0001]</small></li><li><code>SELECT SQL_CACHE `name` FROM `sym_extensions` WHERE `status` = 'enabled';</code> <small>[0.0003]</small></li><li class="odd"><code>SELECT SQL_CACHE `id` FROM `sym_authors` WHERE `username` = 'Nils' AND `password` = '123456789456123' LIMIT 1;</code> <small>[0.0003]</small></li><li><code>UPDATE sym_authors SET  `last_seen` = '2011-10-30 20:24:32' WHERE  `id` = '1';</code> <small>[0.0002]</small></li><li class="odd"><code>SELECT SQL_CACHE *
+					FROM `sym_authors`
+					WHERE `id` IN (1)
+					ORDER BY id ASC;</code> <small>[0.0002]</small></li><li><code>SELECT SQL_CACHE * FROM `sym_extensions`;</code> <small>[0.0003]</small></li></ul>
+	</div>
+</body>
+</html>
