@@ -3,68 +3,47 @@
 -----------------------------------------------------------------------------*/
 
 .duplicator {
+	background: #444433;
+	border: 1px solid #999988;
 	margin: 0;
 	list-style: none;
 }
 .duplicator i {
-	color: rgba(0, 0, 0, 0.4);
-	background: none !important;
+	color: #887;
 }
 .invalid .duplicator {
 	border-color: #aa2211;
 }
 .duplicator > .instance {
 	clear: left;
-/*	border-bottom: 1px solid #eeeedd;*/
-	border-bottom: 1px solid #f3f3f3;
-	border-left: 1px solid #d3d3d3;
-	border-right: 1px solid #d3d3d3;
-	background: #e4e4e0;
+	background: #ddddcc;
+	border-bottom: 1px solid #eeeedd;
 }
 .duplicator > .instance > .header {
-/*	background: #ccccbb;*/
-	border-top: 1px solid #cfcfcf;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-	color: rgba(0, 0, 0, 0.65);
+	background: #ccccbb;
+	border-bottom: 1px solid #eeeedd;
+	color: #666655;
 	margin: 0;
-	padding: 0.5em 1em;
+	padding: 0.5em 1.75em;
 	position: relative;
-
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0, #e6e6e3),
-		color-stop(1, #e4e4e0)
-	);
-
-
 }
 .duplicator > .instance > .header > span > i {
 	margin: 0 0 0 0.5em;
 	font-weight: normal;
 }
 .duplicator > .instance > .header .destructor {
+	font-weight: normal;
+	color: #333322;
+	margin: 0 1.75em;
+	padding: 0.5em 0;
 	position: absolute;
-	top: 5px;
-	right: 7px;
+	right: 0;
 	text-decoration: none;
-	color: rgba(0, 0, 0, 0.3);
-	height: 11px;
-	width: 11px;
-	line-height: 0.5;
-	background: rgba(255, 255, 255, 0.2);
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	padding: 3px 0 0 3px !important;
-	border: 1px solid rgba(255, 255, 255, 0.8);
-	font-size: 0.95em;
+	top: 0;
+	text-shadow: 1px 1px #DDDDCC;
 }
 .duplicator > .instance > .header .destructor:hover {
-	color: rgba(0, 0, 0, 0.7);
-	background: rgba(255, 255, 255, 0.8);
-	border: 1px solid rgba(255, 255, 255, 1);
+	color: #555544;
 }
 .duplicator > .instance > .header .destructor.disabled {
 	color: #333322;
@@ -72,22 +51,16 @@
 	opacity: 0.4;
 }
 .duplicator > .instance > .content {
-	padding: 1em 1em 0 1em;
+	padding: 1em 1.75em 0 1.75em;
 	position: relative;
 }
 .duplicator > .controls {
 	clear: left;
-	background: #f5f5f3;
-	border-top: 1px solid #c2c2c2;
-	border-bottom: 1px solid rgba(207,207,207,0.6);
-	border-left: 1px solid rgba(207,207,207,0.6);
-	border-right: 1px solid rgba(207,207,207,0.6);
+	background: #aaaa99;
 	cursor: default;
-	padding: 0 1em;
+	padding: 0 1.75em;
 /*	position: relative;*/
 	text-align: right;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
 /*	z-index: 3;*/
 }
 .duplicator > .controls:after {
@@ -98,12 +71,7 @@
 }
 .duplicator > .controls.top {
 	overflow: hidden;
-	border-bottom: none;
-	border-top: 1px solid rgba(207,207,207,0.6);
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+	border-bottom: 1px solid #eeeedd;
 }
 .duplicator > .controls.hidden {
 	display: none;
@@ -119,17 +87,17 @@
 	width: auto;
 }
 .duplicator > .controls > .constructor {
-	color: rgba(0, 0, 0, 0.4);
+	color: #f1f1f1;
 	cursor: pointer;
 	padding: 0.5em 0;
 	text-decoration: none;
-/*	text-shadow: 1px 1px #8E8E80;*/
+	text-shadow: 1px 1px #8E8E80;
 }
 .duplicator > .controls > .constructor:hover {
-	color: rgba(0, 0, 0, 0.7);
+	color: #ffffee;
 }
 .duplicator > .controls > .constructor.disabled {
-	color: rgba(0, 0, 0, 0.2);
+	color: #eeeedd;
 	cursor: default;
 	opacity: 0.6;
 }
@@ -175,15 +143,15 @@
 	float: left;
 	margin: 0;
 	padding: 0.5em 0;
-	color: rgba(0, 0, 0, 0.4);
+	color: #eeeedd;
 	text-decoration: none;
-/*	text-shadow: 1px 1px #8E8E80;*/
+	text-shadow: 1px 1px #8E8E80;
 }
 .duplicator.collapsible > .controls > .collapser:hover {
-	color: rgba(0, 0, 0, 0.7);
+	color: #ffffee;
 }
 .duplicator.collapsible > .controls > .collapser.disabled {
-	color: rgba(0, 0, 0, 0.2);
+	color: #eeeedd;
 	cursor: default;
 	opacity: 0.6;
 }
