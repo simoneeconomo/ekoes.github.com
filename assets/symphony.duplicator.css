@@ -21,6 +21,7 @@
 	border-left: 1px solid #bfbfb7;
 	border-right: 1px solid #bfbfb7;
 	background: #e4e4e0;
+	z-index: 10;
 }
 .duplicator > .instance > .header {
 	border-top: 1px solid #cfcfcf;
@@ -41,6 +42,9 @@
 		#e0e0dc,
 		#e4e4e0
 	);
+}
+.duplicator > .instance:hover, .duplicator > .instance:hover > .header {
+	background: #e0e0dc;
 }
 .duplicator > .instance > .header > span > i {
 	margin: 0 0 0 0.5em;
@@ -143,15 +147,18 @@
 	cursor: pointer;
 }
 .duplicator.ordering > .instance {
-	opacity: 0.8;
+	z-index: 10;
 }
 .duplicator > .instance.ordering {
-	border-top: 1px solid #eeeedd;
-	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	border-top: 1px solid #bfbfb7;
+	-moz-box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.2);
 	margin-top: -1px;
-	opacity: 1;
-	z-index: 2;
+	z-index: 1000;
+	background: #dadad6;
+}
+.duplicator > .instance.ordering .header {
+	background: #dadad6;
 }
 .duplicator > .instance.ordering,
 .duplicator > .instance.ordering * {
