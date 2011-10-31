@@ -117,7 +117,7 @@
 			var prepare = function(source) {
 				var instance = $(source).addClass('instance expanded'),
 					header = instance.find(settings.headers).addClass('header').wrapInner('<span />'),
-					destructor = header.append('<a class="destructor" />').find('a.destructor:first').text(Symphony.Language.get('Remove item'));
+					destructor = header.append('<a class="destructor" />').find('a.destructor:first').text('×');
 
 				header.nextAll().wrapAll('<div class="content" />');
 
