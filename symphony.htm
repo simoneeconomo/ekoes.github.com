@@ -21,7 +21,9 @@
 		
 			<!-- Header -->
 			<header id="header">
-<!--				<p class="notice">Your Symphony installation is up to date, but an updater script was still detected. For security reasons, it should be removed. <a href="#">Remove Update Script</a></p>-->
+				<p class="notice">Your Symphony installation is up to date, but an updater script was still detected. For security reasons, it should be removed. <a href="#">Remove Update Script</a></p>
+				<!--				<p class="notice success">Your Symphony installation is up to date, but an updater script was still detected. For security reasons, it should be removed. <a href="#">Remove Update Script</a></p>-->
+				<!--				<p class="notice error">Your Symphony installation is up to date, but an updater script was still detected. For security reasons, it should be removed. <a href="#">Remove Update Script</a></p>-->
 				<h1>
 					<a href="">Styles for Symphony 2.3</a>
 				</h1>
@@ -252,6 +254,56 @@
 						</div>
 					</fieldset>
 					<fieldset class="settings">
+						<legend>Form Elements with Errors</legend>
+						<div id="error" class="invalid">
+							<label>Long Input
+								<input name="" type="text" value="Test">
+							</label>
+							<p>This is a mandatory field.</p>
+						</div>
+						<div class="group">
+							<div>
+								<div id="error" class="invalid">
+									<label>Left Column: Input
+										<input name="" type="text" value="test">
+									</label>
+									<p>You are too ugly to fill this field.</p>
+								</div>
+								<div id="error" class="invalid">
+									<label>Left Column: Select Box
+										<select name="">
+											<option value="1">First option</option>
+											<option value="2">Second option</option>
+										</select>
+									</label>
+									<p>Ah-ah-ah. <a href="http://www.youtube.com/watch?v=otCpCn0l4Wo">Can't touch this.</a></p>
+								</div>
+							</div>
+
+							<div>
+								<div id="error" class="invalid">
+									<label>Right Column: Input
+										<input name="" type="text">
+									</label>
+									<p>Dinner's ready. Go eating.</p>
+								</div>
+								<div id="error" class="invalid">
+									<label>Right Column: Input with Tag List
+										<input name="" type="text">
+									</label>
+									<ul class="tags">
+										<li>some</li>
+										<li>tags</li>
+										<li>to</li>
+										<li>choose</li>
+										<li>from</li>
+									</ul>
+									<p>I forgot what the error was.</p>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="settings">
 						<legend>Multiple Selects</legend>
 						<div class="group">
 							<label>First Column
@@ -348,12 +400,15 @@
 										<label>Label
 											<input name="fields[1][label]" type="text" value="Title">
 										</label>
-										<label>Placement
-											<select name="fields[1][location]">
-												<option value="main" selected="selected">Main content</option>
-												<option value="sidebar">Sidebar</option>
-											</select>
-										</label>
+										<div id="error" class="invalid">
+											<label>Placement
+												<select name="fields[1][location]">
+													<option value="main" selected="selected">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+											<p>Ah-ah-ah. Can't touch this.</p>
+										</div>
 									</div>
 									<div class="group">
 										<label>Publish Label

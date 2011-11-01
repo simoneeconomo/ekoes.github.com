@@ -55,7 +55,8 @@ body {
 }
 a {
 	color: #3f69a5;
-	text-decoration: underline;
+	border-bottom: 1px solid #BDC9DA;
+/*	text-decoration: underline;*/
 	cursor: pointer;
 }
 a:hover {
@@ -105,7 +106,7 @@ label input {
 }
 textarea,
 label input {
-	margin-top: 2px;
+	margin-top: 5px;
 	width: 100%;
 	font-size: 109.09%;
 	font-family: inherit;
@@ -152,21 +153,79 @@ input[type=submit] {
 	font-family: Lucida Grande, Leelawadee, Tahoma, Verdana, sans-serif;
 }
 
+label *:first-child{
+	margin-top: 5px;
+}
+
+label input, textarea {
+	padding: 5px 5px;
+	margin-top: 5px;
+	border: 1px solid #AFAFAF;
+/*	height: 24px;*/
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	background: rgb(250, 250, 250);
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.00, rgb(250, 250, 250)),
+		color-stop(0.95, rgb(242, 242, 242))
+	);
+	background: -moz-linear-gradient(
+		center bottom,
+		rgb(250, 250, 250) 0%,
+		rgb(240, 240, 240) 95%
+	);
+
+	color: #444;
+	font: 11px/1.1 'Lucida Grande', Tahoma, Verdana, sans-serif !important;
+	text-align: left;
+
+	-webkit-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
+	-moz-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
+	box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
+}
+
+textarea {
+	height: auto;
+	padding-top: 5px;
+	font: 11px/1.8 'Lucida Grande', Tahoma, Verdana, sans-serif !important;
+}
+
+label input:hover,
+textarea:hover {
+	border: 1px solid #888;
+}
+
+label input:focus,
+textarea:focus {
+	outline: none;
+	border: 1px solid #5C83BA;
+	-webkit-box-shadow: 0 0 6px #5C83BA;
+}
+
+
 /*-----------------------------------------------------------------------------
 	Globals - Errors
 -----------------------------------------------------------------------------*/
 
 .invalid {
-	color: #fff;
+/*	color: #fff;*/
+	color: #574000;
 	margin-bottom: 1.5em;
-	text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+/*	text-shadow: 1px 1px rgba(0, 0, 0, 0.25);*/
 }
 .invalid label {
 	margin-bottom: 0;
 	padding: 0.75em 1em 0.75em 0.75em;
-	background-color: #EB6347;
-	border: 1px solid #c31;
+	background-color: #fff5d5;
+	border: 1px solid #EFE0B1;
 	border-bottom-width: 0;
+	-webkit-border-radius: 4px 4px 0 0;
 }
 body .invalid label > i {
 	top: 0.75em; right: 1em;
@@ -193,23 +252,59 @@ body .invalid label > i {
 }
 .invalid > label {
 	padding: 0.75em 1em 0.75em;
-	background-color: #EB6347;
-	border: 1px solid #c31;
+	background-color: #fff5d5;
+	border: 1px solid #EFE0B1;
 	border-bottom-width: 0;
 }
 .invalid > p {
+	-webkit-border-radius: 0 0 4px 4px;
+/*	font-style: italic;*/
 	clear: left;
 	margin: 0;
-	padding: 0 1em 0.75em;
-	background-color: #EB6347;
-	border: 1px solid #c31;
-	border-top-width: 0;
-	border-bottom-color: #b21;
+	padding: 0.55em 1em 0.55em;
+	background-color: #FFF9E6;
+	color: #866300;
+	border: 1px solid #EFE0B1;
+}
+.invalid > p:before {
+	font-weight: bold;
+	line-height: 1;
+	display: inline-block;
+	content: "!";
+	text-align: center;
+	margin: -0.25em 0.75em 0 0;
+	width: 15px;
+	height: 12px;
+	padding: 3px 0 0;
+	background: #EBCA25;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.invalid > .tags {
+	margin: 0;
+	padding: 0 1em 1em;
+	background-color: #FFF2CB;
+	border: 1px solid #EFE0B1;
+	border-bottom: none;
+	border-top: none;
 }
 .invalid a {
-	color: #fb9;
-	text-decoration: underline;
+	color: #866300;
+	border-bottom-color: #D4B17D;
 }
 .invalid a:hover {
-	color: #721;
+	color: #574000;
+}
+
+.invalid label input,
+.invalid textarea {
+	border: 1px solid #C5AA62;
+}
+
+.invalid label input:focus,
+.invalid textarea:focus {
+	outline: none;
+	border: 1px solid #B29137;
+	-webkit-box-shadow: 0 0 6px #B29137;
 }
