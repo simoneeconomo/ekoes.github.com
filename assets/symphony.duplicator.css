@@ -6,7 +6,7 @@
 	margin: 0;
 	list-style: none;
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .duplicator i {
 	color: rgba(0, 0, 0, 0.4);
@@ -17,7 +17,6 @@
 }
 .duplicator > .instance {
 	clear: left;
-	-webkit-box-shadow: inset 0 -1px 2px #f3f3f3;
 	border-left: 1px solid #D0D0CD; /* #bfbfb7; */
 	border-right: 1px solid #D0D0CD;
 	background: -webkit-gradient(
@@ -29,15 +28,16 @@
 	);
 	background: -moz-linear-gradient(
 		top,
-		#e0e0dc,
-		#e4e4e0
+		#ECECEB,
+		#F3F3EF
 	);
 /*	background: #ECECEB;*/
 	z-index: 10;
+	-moz-box-shadow: inset 0 -1px 2px #f3f3f3;
+	-webkit-box-shadow: inset 0 -1px 2px #f3f3f3;
 }
 .duplicator > .instance > .header {
 	border-top: 1px solid #cfcfcf;
-	-webkit-box-shadow: inset 0 -1px 1px #f3f3f3;
 /*	border-bottom: 1px solid rgba(255, 255, 255, 0.4);*/
 	color: rgba(0, 0, 0, 0.65);
 	margin: 0;
@@ -56,6 +56,8 @@
 /*		#e0e0dc,*/
 /*		#e4e4e0*/
 /*	);*/
+	-moz-box-shadow: inset 0 -1px 1px #f3f3f3;
+	-webkit-box-shadow: inset 0 -1px 1px #f3f3f3;
 }
 .duplicator > .instance:hover, .duplicator > .instance:hover > .header {
 /*	background: #e0e0dc;*/
@@ -174,6 +176,7 @@
 	border-bottom: 1px solid #D0D0CD;
 	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 	margin-bottom: -1px;
 	z-index: 1000;
 /*	background: #dadad6;*/

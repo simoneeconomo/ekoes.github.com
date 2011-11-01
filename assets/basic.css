@@ -187,7 +187,6 @@ label input, textarea {
 
 	-webkit-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
 	-moz-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
-	box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
 }
 
 textarea {
@@ -205,6 +204,7 @@ label input:focus,
 textarea:focus {
 	outline: none;
 	border: 1px solid #5C83BA;
+	-moz-box-shadow: 0 0 6px #5C83BA;
 	-webkit-box-shadow: 0 0 6px #5C83BA;
 }
 
@@ -225,6 +225,7 @@ textarea:focus {
 	background-color: #fff5d5;
 	border: 1px solid #EFE0B1;
 	border-bottom-width: 0;
+	-moz-border-radius: 4px 4px 0 0;
 	-webkit-border-radius: 4px 4px 0 0;
 }
 body .invalid label > i {
@@ -257,6 +258,7 @@ body .invalid label > i {
 	border-bottom-width: 0;
 }
 .invalid > p {
+	-moz-border-radius: 0 0 4px 4px;
 	-webkit-border-radius: 0 0 4px 4px;
 /*	font-style: italic;*/
 	clear: left;
