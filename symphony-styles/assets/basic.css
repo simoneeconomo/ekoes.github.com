@@ -106,7 +106,7 @@ label input {
 }
 textarea,
 label input {
-	margin-top: 5px;
+	margin-top: 2px;
 	width: 100%;
 	font-size: 109.09%;
 	font-family: inherit;
@@ -154,14 +154,13 @@ input[type=submit] {
 }
 
 label *:first-child{
-	margin-top: 5px;
+	margin-top: 2px;
 }
 
 label input, textarea {
 	padding: 5px 5px;
-	margin-top: 5px;
+/*	margin-top: 5px;*/
 	border: 1px solid #AFAFAF;
-/*	height: 24px;*/
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
