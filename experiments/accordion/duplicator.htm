@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/basic.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/admin.css">
+		<script type="text/javascript" src="assets/jquery.js"></script>
+		<script type="text/javascript" src="assets/jquery.color.js"></script>
+		<script type="text/javascript" src="assets/symphony.js"></script>
+		<script type="text/javascript" src="assets/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="assets/symphony.orderable.js"></script>
+		<script type="text/javascript" src="assets/symphony.selectable.js"></script>
+		<script type="text/javascript" src="assets/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="assets/symphony.tags.js"></script>
+		<script type="text/javascript" src="assets/symphony.pickable.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/symphony.duplicator.css">
+		<script type="text/javascript" src="assets/admin.js"></script>
+		<title>Styles &ndash; Symphony 2.3</title>
+	</head>
+	<body id="publish" class="single">
+		<div id="wrapper">
+		
+			<!-- Header -->
+			<header id="header">
+				<h1>
+					<a href="">Styles for Symphony 2.3</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="#" data-id="1" data-name="Sam" data-type="developer">Sam Symphonist</a>
+					</li>
+					<li>
+						<a href="login.htm" accesskey="l">Logout</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li class="active">First Group
+							<ul>
+								<li class="active">
+									<a href="#">First section</a>
+								</li>
+								<li>
+									<a href="#">Second section with a slightly longer name</a>
+								</li>
+								<li>
+									<a href="#">Third section</a>
+								</li>
+								<li>
+									<a href="#">Fourth section</a>
+								</li>
+								<li>
+									<a href="#">Fifth section</a>
+								</li>
+							</ul>
+						</li>
+					<li>Second Group
+							<ul>
+								<li>
+									<a href="#">Sixth section</a>
+								</li>
+								<li>
+									<a href="#">Seventh section</a>
+								</li>
+								<li>
+									<a href="#">Eighth section</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li>Blueprints
+							<ul>
+								<li>
+									<a href="#">Pages</a>
+								</li>
+								<li>
+									<a href="#">Sections</a>
+								</li>
+								<li>
+									<a href="#">Datasources</a>
+								</li>
+								<li>
+									<a href="#">Events</a>
+								</li>
+								<li>
+									<a href="#">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="#">Authors</a>
+								</li>
+								<li>
+									<a href="#">Preferences</a>
+								</li>
+								<li>
+									<a href="#">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			
+			<!-- Context -->
+			<div id="context">
+				<div id="breadcrumbs">
+					<nav>
+						<p>
+							<a href="#">Test</a>
+							<span>&#8250;</span>
+						</p>
+					</nav>
+					<h2>Test</h2>
+				</div>
+				<ul class="actions">
+					<li><a href="#" title="Edit Section Configuration" class="button">Edit Section</a></li>
+					<li><a href="#" title="Create a new entry" class="create button" accesskey="c">Create New</a></li>
+				</ul>
+			</div>
+			
+			<!-- Contents -->
+			<div id="contents">
+				<form action="" method="post">
+					<fieldset class="settings">
+						<legend>Duplicator</legend>
+						<p class="help contextual inverse navigation">There is rooms for <code>{$explainations}</code>.</p>
+						<div>
+							<p class="label">Fields</p>
+							<div class="duplicator">
+								<ol id="fields-duplicator">
+									<li class="field-input" data-type="input">
+										<h4>Text Input</h4>
+										<input name="fields[1][type]" type="hidden" value="input">
+										<input name="fields[1][id]" type="hidden" value="1">
+										<div class="group">
+											<label>Label
+												<input name="fields[1][label]" type="text" value="Title">
+											</label>
+											<label>Placement
+												<select name="fields[1][location]">
+													<option value="main" selected="selected">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<div class="group">
+											<label>Publish Label
+												<i>Optional</i>
+												<input name="fields[1][publish_label]" type="text">
+											</label>
+											<div>
+												<label>Validation Rule
+													<i>Optional</i>
+													<input name="fields[1][validator]" type="text">
+												</label>
+												<ul class="tags singular">
+													<li class="/^-?(?:\d+(?:\.\d+)?|\.\d+)$/i">number</li>
+													<li class="/^\w(?:\.?[\w%+-]+)*@\w(?:[\w-]*\.)+?[a-z]{2,}$/i">email</li>
+													<li class="/^[^\s:\/?#]+:(?:\/{2,3})?[^\s.\/?#]+(?:\.[^\s.\/?#]+)*(?:\/[^\s?#]*\??[^\s?#]*(#[^\s#]*)?)?$/">URI</li>
+												</ul>
+											</div>
+										</div>
+										<div class="compact">
+											<input name="fields[1][required]" type="hidden" value="no">
+											<label><input name="fields[1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+											<input name="fields[1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="field-input" data-type="input">
+										<h4>Text Input</h4>
+										<input name="fields[1][type]" type="hidden" value="input">
+										<input name="fields[1][id]" type="hidden" value="1">
+										<div class="group">
+											<label>Label
+												<input name="fields[1][label]" type="text" value="Title">
+											</label>
+											<div id="error" class="invalid">
+												<label>Placement
+													<select name="fields[1][location]">
+														<option value="main" selected="selected">Main content</option>
+														<option value="sidebar">Sidebar</option>
+													</select>
+												</label>
+												<p>Ah-ah-ah. Can't touch this.</p>
+											</div>
+										</div>
+										<div class="group">
+											<label>Publish Label
+												<i>Optional</i>
+												<input name="fields[1][publish_label]" type="text">
+											</label>
+											<div>
+												<label>Validation Rule
+													<i>Optional</i>
+													<input name="fields[1][validator]" type="text">
+												</label>
+												<ul class="tags singular">
+													<li class="/^-?(?:\d+(?:\.\d+)?|\.\d+)$/i">number</li>
+													<li class="/^\w(?:\.?[\w%+-]+)*@\w(?:[\w-]*\.)+?[a-z]{2,}$/i">email</li>
+													<li class="/^[^\s:\/?#]+:(?:\/{2,3})?[^\s.\/?#]+(?:\.[^\s.\/?#]+)*(?:\/[^\s?#]*\??[^\s?#]*(#[^\s#]*)?)?$/">URI</li>
+												</ul>
+											</div>
+										</div>
+										<div class="compact">
+											<input name="fields[1][required]" type="hidden" value="no">
+											<label><input name="fields[1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+											<input name="fields[1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="field-input" data-type="input">
+										<h4>Text Input</h4>
+										<input name="fields[1][type]" type="hidden" value="input">
+										<input name="fields[1][id]" type="hidden" value="1">
+										<div class="group">
+											<label>Label
+												<input name="fields[1][label]" type="text" value="Title">
+											</label>
+											<label>Placement
+												<select name="fields[1][location]">
+													<option value="main" selected="selected">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<div class="group">
+											<label>Publish Label
+												<i>Optional</i>
+												<input name="fields[1][publish_label]" type="text">
+											</label>
+											<div>
+												<label>Validation Rule
+													<i>Optional</i>
+													<input name="fields[1][validator]" type="text">
+												</label>
+												<ul class="tags singular">
+													<li class="/^-?(?:\d+(?:\.\d+)?|\.\d+)$/i">number</li>
+													<li class="/^\w(?:\.?[\w%+-]+)*@\w(?:[\w-]*\.)+?[a-z]{2,}$/i">email</li>
+													<li class="/^[^\s:\/?#]+:(?:\/{2,3})?[^\s.\/?#]+(?:\.[^\s.\/?#]+)*(?:\/[^\s?#]*\??[^\s?#]*(#[^\s#]*)?)?$/">URI</li>
+												</ul>
+											</div>
+										</div>
+										<div class="compact">
+											<input name="fields[1][required]" type="hidden" value="no">
+											<label><input name="fields[1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+											<input name="fields[1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="template field-author" data-type="author">
+										<h4>Author</h4>
+										<input name="fields[-1][type]" type="hidden" value="author">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<label>Publish Label
+											<i>Optional</i>
+											<input name="fields[-1][publish_label]" type="text">
+										</label>
+										<div class="compact">
+											<label><input name="fields[-1][allow_multiple_selection]" type="checkbox" value="yes" /> Allow selection of multiple authors</label>
+											<label><input name="fields[-1][default_to_current_user]" type="checkbox" value="yes" /> Select current user by default</label>
+											<input name="fields[-1][required]" type="hidden" value="no">
+											<label><input name="fields[-1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="template field-checkbox" data-type="checkbox">
+										<h4>Checkbox</h4>
+										<input name="fields[-1][type]" type="hidden" value="checkbox">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar" selected="selected">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<label>Publish Label
+											<i>Optional</i>
+											<input name="fields[-1][publish_label]" type="text">
+										</label>
+										<div class="compact">
+											<label><input name="fields[-1][default_state]" type="checkbox" value="on" /> Checked by default</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="template field-date" data-type="date">
+										<h4>Date</h4>
+										<input name="fields[-1][type]" type="hidden" value="date">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar" selected="selected">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<label>Publish Label
+											<i>Optional</i>
+											<input name="fields[-1][publish_label]" type="text">
+										</label>
+										<div class="compact">
+											<label><input name="fields[-1][pre_populate]" type="checkbox" value="yes" checked="checked" /> Pre-populate this field with today’s date</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="template field-upload" data-type="upload">
+										<h4>File Upload</h4>
+										<input name="fields[-1][type]" type="hidden" value="upload">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar" selected="selected">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<label>Publish Label
+											<i>Optional</i>
+											<input name="fields[-1][publish_label]" type="text">
+										</label>
+										<label>Destination Directory
+											<select name="fields[-1][destination]">
+												<option value="/workspace">/workspace</option>
+											</select>
+										</label>
+										<label>Validation Rule
+											<i>Optional</i>
+											<input name="fields[-1][validator]" type="text">
+										</label>
+										<ul class="tags singular">
+											<li class="/\.(?:bmp|gif|jpe?g|png)$/i">image</li>
+											<li class="/\.(?:docx?|pdf|rtf|txt)$/i">document</li>
+										</ul>
+										<div class="compact">
+											<input name="fields[-1][required]" type="hidden" value="no">
+											<label><input name="fields[-1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="template field-select" data-type="select">
+										<h4>Select Box</h4>
+										<input name="fields[-1][type]" type="hidden" value="select">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar" selected="selected">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<label>Publish Label
+											<i>Optional</i>
+											<input name="fields[-1][publish_label]" type="text">
+										</label>
+										<div class="group">
+											<label>Predefined Values
+												<i>Optional</i>
+												<input name="fields[-1][static_options]" type="text">
+											</label>
+											<label>Dynamic Values
+												<i>Optional</i>
+												<select name="fields[-1][dynamic_options]">
+													<option value="">None</option>
+													<optgroup label="Test">
+														<option value="1">Title</option>
+													</optgroup>
+												</select>
+											</label>
+										</div>
+										<div class="compact">
+											<label><input name="fields[-1][allow_multiple_selection]" type="checkbox" value="yes" /> Allow selection of multiple options</label>
+											<input name="fields[-1][show_association]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_association]" type="checkbox" value="yes" /> Display relationship in linked sections
+												<i>Available when using Dynamic Values</i>
+											</label>
+											<label><input name="fields[-1][sort_options]" type="checkbox" value="yes" /> Sort all options alphabetically</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+											<input name="fields[-1][required]" type="hidden" value="no">
+											<label><input name="fields[-1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+										</div>
+									</li>
+									<li class="template field-selectbox_link" data-type="selectbox_link">
+										<h4>Select Box Link</h4>
+										<input name="fields[-1][type]" type="hidden" value="selectbox_link">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<label>Values
+											<select name="fields[-1][related_field_id][]" multiple="multiple">
+												<optgroup label="Test">
+													<option value="1">Title</option>
+												</optgroup>
+											</select>
+										</label>
+										<label>Limit to the <input name="fields[-1][limit]" type="text" value="20" size="3" /> most recent entries</label>
+										<div class="compact">
+											<label><input name="fields[-1][allow_multiple_selection]" type="checkbox" value="yes" /> Allow selection of multiple options</label>
+											<input name="fields[-1][show_association]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_association]" type="checkbox" value="yes" checked="checked" /> Display relationship in linked sections</label>
+											<input name="fields[-1][required]" type="hidden" value="no">
+											<label><input name="fields[-1][required]" type="checkbox" value="yes" checked="checked" /> Make this a required field</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="template field-taglist" data-type="taglist">
+										<h4>Tag List</h4>
+										<input name="fields[-1][type]" type="hidden" value="taglist">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<label>Publish Label
+											<i>Optional</i>
+											<input name="fields[-1][publish_label]" type="text">
+										</label>
+										<label>Suggestion List
+											<select name="fields[-1][pre_populate_source][]" multiple="multiple">
+												<option value="existing" selected="selected">Existing Values</option>
+												<optgroup label="Test">
+													<option value="1">Title</option>
+												</optgroup>
+											</select>
+										</label>
+										<label>Validation Rule
+											<i>Optional</i>
+											<input name="fields[-1][validator]" type="text">
+										</label>
+										<ul class="tags singular">
+											<li class="/^-?(?:\d+(?:\.\d+)?|\.\d+)$/i">number</li>
+											<li class="/^\w(?:\.?[\w%+-]+)*@\w(?:[\w-]*\.)+?[a-z]{2,}$/i">email</li>
+											<li class="/^[^\s:\/?#]+:(?:\/{2,3})?[^\s.\/?#]+(?:\.[^\s.\/?#]+)*(?:\/[^\s?#]*\??[^\s?#]*(#[^\s#]*)?)?$/">URI</li>
+										</ul>
+										<input name="fields[-1][show_column]" type="hidden" value="no">
+										<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+									</li>
+									<li class="template field-textarea" data-type="textarea">
+										<h4>Textarea</h4>
+										<input name="fields[-1][type]" type="hidden" value="textarea">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<div class="group">
+											<label>Publish Label
+												<i>Optional</i>
+												<input name="fields[-1][publish_label]" type="text">
+											</label>
+											<label>Text Formatter
+												<select name="fields[-1][formatter]">
+													<option value="none">None</option>
+													<option value="markdown">Markdown</option>
+													<option value="markdown_extra">Markdown Extra</option>
+													<option value="markdown_extra_with_smartypants">Markdown Extra (With SmartyPants)</option>
+													<option value="markdown_with_purifier">Markdown (With HTML Purifier)</option>
+												</select>
+											</label>
+										</div>
+										<label>Make textarea <input name="fields[-1][size]" type="text" value="15" size="3" /> rows tall</label>
+										<div class="compact">
+											<input name="fields[-1][required]" type="hidden" value="no">
+											<label><input name="fields[-1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+									<li class="template field-input" data-type="input">
+										<h4>Text Input</h4>
+										<input name="fields[-1][type]" type="hidden" value="input">
+										<div class="group">
+											<label>Label
+												<input name="fields[-1][label]" type="text">
+											</label>
+											<label>Placement
+												<select name="fields[-1][location]">
+													<option value="main">Main content</option>
+													<option value="sidebar">Sidebar</option>
+												</select>
+											</label>
+										</div>
+										<div class="group">
+											<label>Publish Label
+												<i>Optional</i>
+												<input name="fields[-1][publish_label]" type="text">
+											</label>
+											<div>
+												<label>Validation Rule
+													<i>Optional</i>
+													<input name="fields[-1][validator]" type="text">
+												</label>
+												<ul class="tags singular">
+													<li class="/^-?(?:\d+(?:\.\d+)?|\.\d+)$/i">number</li>
+													<li class="/^\w(?:\.?[\w%+-]+)*@\w(?:[\w-]*\.)+?[a-z]{2,}$/i">email</li>
+													<li class="/^[^\s:\/?#]+:(?:\/{2,3})?[^\s.\/?#]+(?:\.[^\s.\/?#]+)*(?:\/[^\s?#]*\??[^\s?#]*(#[^\s#]*)?)?$/">URI</li>
+												</ul>
+											</div>
+										</div>
+										<div class="compact">
+											<input name="fields[-1][required]" type="hidden" value="no">
+											<label><input name="fields[-1][required]" type="checkbox" value="yes" /> Make this a required field</label>
+											<input name="fields[-1][show_column]" type="hidden" value="no">
+											<label class="meta"><input name="fields[-1][show_column]" type="checkbox" value="yes" checked="checked" /> Display field’s value in entries table</label>
+										</div>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
